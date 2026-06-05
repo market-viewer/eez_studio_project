@@ -1,7 +1,8 @@
 {
   "navigation": {
-    "selectedUserPageObject": "[market-viewer.eez-project]:/userPages/1",
-    "selectedActionObject": "[market-viewer.eez-project]:/actions/0",
+    "selectedUserPageObject": "[market-viewer.eez-project]:/userPages/3",
+    "selectedUserWidgetObject": "[market-viewer.eez-project]:/userWidgets/0",
+    "selectedActionObject": "[market-viewer.eez-project]:/actions/7",
     "selectedStyleObject": "[market-viewer.eez-project]:/lvglStyles/styles/2",
     "selectedThemeObject": "[market-viewer.eez-project]:/themes/0",
     "selectedThemeColorObject": "[market-viewer.eez-project]:/colors/5",
@@ -196,10 +197,31 @@
               "type": "tabset",
               "id": "EDITORS",
               "weight": 59.20634920634921,
-              "selected": 1,
               "enableDeleteWhenEmpty": false,
               "enableClose": false,
               "children": [
+                {
+                  "type": "tab",
+                  "id": "#89aaad24-e8ed-473b-9736-2251f3a91faf",
+                  "name": "wifiScreen",
+                  "component": "editor",
+                  "config": {
+                    "objectPath": "[market-viewer.eez-project]:/userPages/3",
+                    "permanent": false
+                  },
+                  "icon": "svg:page"
+                },
+                {
+                  "type": "tab",
+                  "id": "#fb3aaae5-35fa-4c9f-a3f0-024b2f24207f",
+                  "name": "backButton",
+                  "component": "editor",
+                  "config": {
+                    "objectPath": "[market-viewer.eez-project]:/userWidgets/0",
+                    "permanent": true
+                  },
+                  "icon": "svg:user_widget"
+                },
                 {
                   "type": "tab",
                   "id": "#4a10d11d-6b74-4e12-93cc-3d1e37f5d00c",
@@ -219,12 +241,11 @@
                   "component": "editor",
                   "config": {
                     "objectPath": "[market-viewer.eez-project]:/userPages/1",
-                    "permanent": false
+                    "permanent": true
                   },
                   "icon": "svg:page"
                 }
-              ],
-              "active": true
+              ]
             },
             {
               "type": "row",
@@ -244,7 +265,8 @@
                       "enableClose": false,
                       "icon": "svg:properties"
                     }
-                  ]
+                  ],
+                  "active": true
                 },
                 {
                   "type": "tabset",
@@ -1105,10 +1127,10 @@
       },
       "transform": {
         "translate": {
-          "x": -12.087362430272606,
-          "y": -18.03939358604734
+          "x": -294,
+          "y": -442
         },
-        "scale": 0.75
+        "scale": 1.1
       },
       "timeline": {
         "isEditorActive": false,
@@ -1123,15 +1145,18 @@
         "0": {
           "0": {},
           "1": {},
-          "3": {}
+          "3": {
+            "$selected": true
+          },
+          "4": {}
         }
       },
       "transform": {
         "translate": {
-          "x": -18.539386872456078,
-          "y": -229.94467329545466
+          "x": -216.47688687245608,
+          "y": -263.87826704545466
         },
-        "scale": 1.1
+        "scale": 1.5
       },
       "timeline": {
         "isEditorActive": false,
@@ -1143,15 +1168,15 @@
     "[market-viewer.eez-project]:/lvglStyles/styles[tree-state]": {
       "0": {},
       "1": {},
-      "2": {
-        "$selected": true
-      }
+      "2": {}
     },
     "[market-viewer.eez-project]:/userPages/2[flow-state]": {
       "selectionFront": {},
       "selectionBack": {
         "0": {
+          "0": {},
           "1": {},
+          "3": {},
           "4": {
             "$selected": true
           }
@@ -1159,10 +1184,10 @@
       },
       "transform": {
         "translate": {
-          "x": -188.8665267412935,
-          "y": -154.8201764614428
+          "x": -123.40949549129351,
+          "y": -166.0154889614428
         },
-        "scale": 1.1
+        "scale": 1.5
       },
       "timeline": {
         "isEditorActive": false,
@@ -1175,15 +1200,41 @@
       "selectionFront": {},
       "selectionBack": {
         "0": {
-          "0": {}
+          "0": {},
+          "2": {
+            "0": {
+              "0": {
+                "$selected": true
+              }
+            }
+          }
         }
       },
       "transform": {
         "translate": {
-          "x": -240.68281249999995,
-          "y": -340.76371527777775
+          "x": -164.1772727272726,
+          "y": -296.7348958333333
         },
-        "scale": 1.1
+        "scale": 1.5
+      },
+      "timeline": {
+        "isEditorActive": false,
+        "position": 0,
+        "secondToPx": 200,
+        "scrollLeft": 0
+      }
+    },
+    "[market-viewer.eez-project]:/userWidgets/0[flow-state]": {
+      "selectionFront": {},
+      "selectionBack": {
+        "0": {}
+      },
+      "transform": {
+        "translate": {
+          "x": -52.20703125,
+          "y": -235.9375
+        },
+        "scale": 1.5
       },
       "timeline": {
         "isEditorActive": false,
@@ -1210,7 +1261,7 @@
   "lvglExpandedPropertiesGroup": [],
   "showInactiveFlowsInDebugger": true,
   "globalFlowZoom": true,
-  "flowZoom": 1.1,
+  "flowZoom": 1.5,
   "implementationLanguage": "C++",
   "openDialogDefaultPath": "/home/jotalac/Documents/squareline_studio_projects/market_viewer/assets/return-icon.png"
 }
