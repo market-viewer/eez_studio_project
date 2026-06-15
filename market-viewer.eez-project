@@ -384,6 +384,15 @@
       "componentGroups": [],
       "userProperties": [],
       "name": "toggleMarketScreenSetting"
+    },
+    {
+      "objID": "9a7559cf-1410-4ca0-c27a-550835b29213",
+      "components": [],
+      "connectionLines": [],
+      "localVariables": [],
+      "componentGroups": [],
+      "userProperties": [],
+      "name": "refetch_screens"
     }
   ],
   "userPages": [
@@ -591,10 +600,10 @@
                       "timeline": [],
                       "eventHandlers": [
                         {
-                          "objID": "adea08f7-2865-417b-e0b6-192fc826f64a",
+                          "objID": "584c3a68-34e6-44e3-8ca5-9d23b8eb72b1",
                           "eventName": "CLICKED",
                           "handlerType": "action",
-                          "action": "toggleMarketScreenSetting",
+                          "action": "simpleDisplaySwitchToggle",
                           "userData": 0
                         }
                       ],
@@ -751,7 +760,7 @@
                           "objID": "173fe29f-9a1f-42cc-aacb-80304e57a026",
                           "eventName": "CLICKED",
                           "handlerType": "action",
-                          "action": "toggleMarketScreenSetting",
+                          "action": "displayGraphSwitchToggle",
                           "userData": 0
                         }
                       ],
@@ -908,7 +917,7 @@
                           "objID": "80ded264-f224-494f-feb8-ae1a0832ef29",
                           "eventName": "CLICKED",
                           "handlerType": "action",
-                          "action": "toggleMarketScreenSetting",
+                          "action": "candleChartSwitchToggle",
                           "userData": 0
                         }
                       ],
@@ -4641,7 +4650,15 @@
                 "childStyles": []
               },
               "timeline": [],
-              "eventHandlers": [],
+              "eventHandlers": [
+                {
+                  "objID": "d1028c44-7250-436b-98d0-d8015f8b4655",
+                  "eventName": "PRESSED",
+                  "handlerType": "action",
+                  "action": "refetch_screens",
+                  "userData": 0
+                }
+              ],
               "identifier": "screensRefetchButton",
               "leftUnit": "px",
               "topUnit": "px",
@@ -4913,56 +4930,6 @@
           "heightUnit": "px",
           "children": [
             {
-              "objID": "cac3f81f-db03-49fc-b816-58f54b4b3e57",
-              "type": "LVGLImageWidget",
-              "left": 0,
-              "top": 0,
-              "width": 466,
-              "height": 466,
-              "customInputs": [],
-              "customOutputs": [],
-              "style": {
-                "objID": "f4281244-2264-4ce8-f583-768aab17a4d9",
-                "useStyle": "default",
-                "conditionalStyles": [],
-                "childStyles": []
-              },
-              "timeline": [],
-              "eventHandlers": [],
-              "identifier": "clockGaugeImage",
-              "leftUnit": "px",
-              "topUnit": "px",
-              "widthUnit": "content",
-              "heightUnit": "content",
-              "children": [],
-              "widgetFlags": "ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLLABLE|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
-              "hiddenFlagType": "literal",
-              "clickableFlagType": "literal",
-              "flagScrollbarMode": "",
-              "flagScrollDirection": "",
-              "scrollSnapX": "",
-              "scrollSnapY": "",
-              "checkedStateType": "literal",
-              "disabledStateType": "literal",
-              "states": "",
-              "localStyles": {
-                "objID": "fd9d2a28-e51e-4119-b3aa-084ae7dd3163"
-              },
-              "group": "",
-              "groupIndex": 0,
-              "image": "clockGauge",
-              "setPivot": false,
-              "pivotX": 0,
-              "pivotY": 0,
-              "zoom": 256,
-              "angle": 0,
-              "innerAlign": "CENTER",
-              "sizeMode": "VIRTUAL",
-              "value": 0,
-              "valueType": "literal",
-              "previewValue": 0
-            },
-            {
               "objID": "25c167f4-2a8e-4751-d6f1-6a340618b21c",
               "type": "LVGLLabelWidget",
               "left": 146,
@@ -5166,68 +5133,9 @@
               "value": 0,
               "valueType": "literal",
               "previewValue": 0
-            }
-          ],
-          "widgetFlags": "CLICKABLE|PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER",
-          "hiddenFlagType": "literal",
-          "clickableFlag": true,
-          "clickableFlagType": "literal",
-          "checkedStateType": "literal",
-          "disabledStateType": "literal",
-          "states": "",
-          "localStyles": {
-            "objID": "ddcca3f5-10fd-48e2-981d-d7207bb86f8d",
-            "definition": {
-              "MAIN": {
-                "DEFAULT": {
-                  "bg_color": "black"
-                }
-              }
-            }
-          },
-          "groupIndex": 0
-        }
-      ],
-      "connectionLines": [],
-      "localVariables": [],
-      "componentGroups": [],
-      "userProperties": [],
-      "name": "clockScreen",
-      "left": 0,
-      "top": 0,
-      "width": 466,
-      "height": 466,
-      "isUsedAsUserWidget": false,
-      "createAtStart": true,
-      "deleteOnScreenUnload": false
-    },
-    {
-      "objID": "b949b0d1-ecf6-475b-e1e0-6d9554b4a158",
-      "components": [
-        {
-          "objID": "ce1bba1a-aae6-4278-995b-48edb29d26c9",
-          "type": "LVGLScreenWidget",
-          "left": 0,
-          "top": 0,
-          "width": 466,
-          "height": 466,
-          "customInputs": [],
-          "customOutputs": [],
-          "style": {
-            "objID": "baaa4fb7-0a0e-496a-e2f8-7769f28151b6",
-            "useStyle": "default",
-            "conditionalStyles": [],
-            "childStyles": []
-          },
-          "timeline": [],
-          "eventHandlers": [],
-          "leftUnit": "px",
-          "topUnit": "px",
-          "widthUnit": "px",
-          "heightUnit": "px",
-          "children": [
+            },
             {
-              "objID": "c47033bb-5622-4c49-f80f-99cdff9fcf7d",
+              "objID": "618e30b2-b035-4c6d-bd55-afb73e44ec55",
               "type": "LVGLLabelWidget",
               "left": 0,
               "top": 0,
@@ -5236,7 +5144,7 @@
               "customInputs": [],
               "customOutputs": [],
               "style": {
-                "objID": "0fba98bf-4fb5-49b4-b62a-1bad631ede79",
+                "objID": "56cc55b4-bd9a-4006-d542-bb5f11c13388",
                 "useStyle": "default",
                 "conditionalStyles": [],
                 "childStyles": []
@@ -5250,6 +5158,7 @@
               "heightUnit": "content",
               "children": [],
               "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLLABLE|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
+              "hiddenFlag": true,
               "hiddenFlagType": "literal",
               "clickableFlagType": "literal",
               "flagScrollbarMode": "",
@@ -5261,7 +5170,7 @@
               "states": "",
               "useStyle": "",
               "localStyles": {
-                "objID": "19d2bc3c-ccca-49ca-be18-a1e1348101f3",
+                "objID": "3b7d6739-59b8-4740-ac1a-9274bf709b0f",
                 "definition": {
                   "MAIN": {
                     "DEFAULT": {
@@ -5279,7 +5188,7 @@
               "recolor": false
             },
             {
-              "objID": "603a0136-7a6d-4417-9845-e525cb4f2231",
+              "objID": "ad8c8a43-a93f-4128-a05b-e63133d87538",
               "type": "LVGLLabelWidget",
               "left": 0,
               "top": -90,
@@ -5288,7 +5197,7 @@
               "customInputs": [],
               "customOutputs": [],
               "style": {
-                "objID": "311157b7-fed1-4899-a4df-c9d49f496dec",
+                "objID": "b86c6d7f-df72-4225-bb9d-62a3b11761f4",
                 "useStyle": "default",
                 "conditionalStyles": [],
                 "childStyles": []
@@ -5302,6 +5211,7 @@
               "heightUnit": "content",
               "children": [],
               "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLLABLE|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
+              "hiddenFlag": true,
               "hiddenFlagType": "literal",
               "clickableFlagType": "literal",
               "flagScrollbarMode": "",
@@ -5313,7 +5223,7 @@
               "states": "",
               "useStyle": "",
               "localStyles": {
-                "objID": "9eaf4ffb-917b-405e-badc-02ac1e559b35",
+                "objID": "8fc1bf9c-b313-4e1f-a3be-dac1c99b09b3",
                 "definition": {
                   "MAIN": {
                     "DEFAULT": {
@@ -5332,7 +5242,7 @@
               "recolor": false
             },
             {
-              "objID": "c20916a4-6958-4ec9-e1e0-a47386b44800",
+              "objID": "f6721842-cc31-4514-fd9e-2a79cdeb01f1",
               "type": "LVGLLabelWidget",
               "left": 0,
               "top": 90,
@@ -5341,20 +5251,21 @@
               "customInputs": [],
               "customOutputs": [],
               "style": {
-                "objID": "ba5d2584-ac00-4120-9542-f9d29d0d4f4b",
+                "objID": "45b6b02d-f0cb-4e2a-bbda-0eff37ce9f23",
                 "useStyle": "default",
                 "conditionalStyles": [],
                 "childStyles": []
               },
               "timeline": [],
               "eventHandlers": [],
-              "identifier": "digitalDateLabel_1",
+              "identifier": "digitalTimezoneLabel",
               "leftUnit": "px",
               "topUnit": "px",
               "widthUnit": "content",
               "heightUnit": "content",
               "children": [],
               "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLLABLE|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
+              "hiddenFlag": true,
               "hiddenFlagType": "literal",
               "clickableFlagType": "literal",
               "flagScrollbarMode": "",
@@ -5366,7 +5277,7 @@
               "states": "",
               "useStyle": "",
               "localStyles": {
-                "objID": "a17d9000-332e-4628-c6bf-943e90280ced",
+                "objID": "71d6725e-89eb-4346-db49-d977f062289d",
                 "definition": {
                   "MAIN": {
                     "DEFAULT": {
@@ -5393,11 +5304,13 @@
           "disabledStateType": "literal",
           "states": "",
           "localStyles": {
-            "objID": "899b841b-067a-4be9-f111-826fb9e13d15",
+            "objID": "ddcca3f5-10fd-48e2-981d-d7207bb86f8d",
             "definition": {
               "MAIN": {
                 "DEFAULT": {
-                  "bg_img_src": "blue_gradient",
+                  "bg_color": "black",
+                  "bg_img_src": "clockGauge",
+                  "bg_img_opa": 255,
                   "bg_img_tiled": true
                 }
               }
@@ -5410,7 +5323,7 @@
       "localVariables": [],
       "componentGroups": [],
       "userProperties": [],
-      "name": "digitalClockScreen",
+      "name": "clockScreen",
       "left": 0,
       "top": 0,
       "width": 466,
